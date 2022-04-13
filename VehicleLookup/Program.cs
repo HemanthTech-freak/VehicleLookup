@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using VehicleLookup.Core.VehicleLookup;
+using VehicleLookup.Core.VehicleLookupService;
+using VehicleLookup.Models.Entity;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<masterContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MySqlConnection")));
+
+builder.Services.AddScoped<IVehicleLookup, VehicleLookupService>();
 
 var app = builder.Build();
 

@@ -1,12 +1,16 @@
-﻿namespace VehicleLookup.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace VehicleLookup.Models.Entity
 {
-    public class Vehicle
+    public partial class VehicleDetail
     {
-        public string? RegistrationNumber { get; set; }
+        public long Id { get; set; }
+        public string RegistrationNumber { get; set; } = null!;
         public string? VehicleMake { get; set; }
         public string? VehicleModel { get; set; }
         public string? VehicleVariant { get; set; }
-        public DateTime? RegistrationDate { get; set; }
+        public DateTime? RegistartionDate { get; set; }
         public decimal? ManufactureYear { get; set; }
         public decimal? RtoCode { get; set; }
         public string? RtoLocation { get; set; }
