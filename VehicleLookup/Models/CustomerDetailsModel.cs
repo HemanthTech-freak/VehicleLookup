@@ -7,11 +7,11 @@
         public Organisation? Organisation { get; set; }
         public string? PermanentAddress { get; set; }
         public string? CommunicationAddress { get; set; }
-        public string? PhoneNumber { get; set; }
+        public long? PhoneNumber { get; set; }
         public string? EmailAddress { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string? NomineeName { get; set; }
-        public string? NomineeAge { get; set; }
+        public int? NomineeAge { get; set; }
         public string? NomineeRelationship { get; set; }
     }
 
